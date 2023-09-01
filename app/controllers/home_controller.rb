@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   include ::Applin::Rails
-  @@count = 1
+  @@count = 0
 
   def index
     send_page plain_page {

@@ -1,6 +1,6 @@
 services:
   - type: web
-  - name: rails-example.applin.dev
+    name: rails-example.applin.dev
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
