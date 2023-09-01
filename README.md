@@ -1,24 +1,13 @@
-# README
+# applin-rails-example
+This repo is an example of how to use applin-rails.
+See [app/controllers/home_controller.rb](app/controllers/home_controller.rb).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+It runs at https://rails-example.applin.dev/ .
 
-Things you may want to cover:
+Run the server locally at `127.0.0.1:3000`:
+* Install Ruby 3.2.2 or newer
+* `bundle install`
+* `bundle exec ./bin/rails server`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run the tests:
+TODO
