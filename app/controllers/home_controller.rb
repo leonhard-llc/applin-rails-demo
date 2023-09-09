@@ -13,9 +13,17 @@ class HomeController < ApplicationController
   #     }
   #   end
   def index
-    send_page nav_page(title: "Applin Demo", poll_seconds: 30) {
+    send_page nav_page(title: "Applin Rails Demo", poll_seconds: 30) {
       scroll {
         column(widgets: [
+          form_section(title: "About", widgets: [
+            text("This app demonstrates how to use the applin-rails library to make a mobile app.\n\nThe demo server runs at\nhttps://rails-demo.applin.dev/."),
+            nav_button(
+              text: "Source Code of this App",
+              sub_text: "github.com/leonhard-llc/applin-rails-demo",
+              actions: [launch_url("https://github.com/leonhard-llc/applin-rails-demo")],
+            ),
+          ]),
           form_section(title: "Pages", widgets: [
             nav_button(text: "Alert Modal", actions: [push("/alert_modal_page")]),
             nav_button(text: "Drawer Modal", actions: [push("/draw_modal_page")]),
@@ -35,20 +43,20 @@ class HomeController < ApplicationController
             nav_button(text: "Text", actions: [push("/text_page")]),
             nav_button(text: "Textfield", actions: [push("/textfield_page")]),
           ]),
-          # form_section(title: "Photos", widgets: [
-          #   nav_button(text: "Choose Photo", actions: [push("/upload-photo")]),
-          #   nav_button(text: "Take Photo", actions: [push("/take-photo")]),
-          #   nav_button(text: "View Photo", actions: [push("/view_photo_page")]),
-          # ]),
-          # form_section(title: "Update Modes", widgets: [
-          #   nav_button(text: "Inert", actions: [push("/inert_page")]),
-          #   nav_button(text: "Poll", actions: [push("/poll_page")]),
-          # # TODO: Implement streaming page updates.
-          # # nav_button(text: "stream_page", actions: [push("/stream_page")]),
-          # ]),
-          # form_section(title: "Vars", widgets: [
-          #   nav_button(text: "Check Vars", actions: [push("/check_vars_page")]),
-          # ]),
+        # form_section(title: "Photos", widgets: [
+        #   nav_button(text: "Choose Photo", actions: [push("/upload-photo")]),
+        #   nav_button(text: "Take Photo", actions: [push("/take-photo")]),
+        #   nav_button(text: "View Photo", actions: [push("/view_photo_page")]),
+        # ]),
+        # form_section(title: "Update Modes", widgets: [
+        #   nav_button(text: "Inert", actions: [push("/inert_page")]),
+        #   nav_button(text: "Poll", actions: [push("/poll_page")]),
+        # # TODO: Implement streaming page updates.
+        # # nav_button(text: "stream_page", actions: [push("/stream_page")]),
+        # ]),
+        # form_section(title: "Vars", widgets: [
+        #   nav_button(text: "Check Vars", actions: [push("/check_vars_page")]),
+        # ]),
         ])
       }
     }
