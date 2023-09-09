@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: rails-example.applin.dev
+    name: rails-demo.applin.dev
     plan: starter
     numInstances: 1
     runtime: ruby
