@@ -43,6 +43,10 @@ class HomeController < ApplicationController
             nav_button(text: "Text", actions: [push("/text_page")]),
             nav_button(text: "Textfield", actions: [push("/textfield_page")]),
           ]),
+          form_section(title: "Page Update Modes", widgets: [
+            nav_button(text: "Inert", actions: [push("/inert_page")]),
+            nav_button(text: "Polled", actions: [push("/polled_page")]),
+          ]),
         # form_section(title: "Photos", widgets: [
         #   nav_button(text: "Choose Photo", actions: [push("/upload-photo")]),
         #   nav_button(text: "Take Photo", actions: [push("/take-photo")]),

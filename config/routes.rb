@@ -28,5 +28,9 @@ Rails.application.routes.draw do
   get "/nav_button_page", to: "widgets#nav_button_page"
   get "/textfield_page", to: "widgets#textfield_page"
   get "/text_page", to: "widgets#text_page"
+
+  get "/inert_page", to: "update_modes#inert_page"
+  get "/polled_page", to: "update_modes#polled_page"
+
   # get "/NNNNN", to: "widgets#NNNNNN"
 end
