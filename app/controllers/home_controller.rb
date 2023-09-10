@@ -25,8 +25,6 @@ class HomeController < ApplicationController
             ),
           ]),
           form_section(title: "Pages", widgets: [
-            nav_button(text: "Alert Modal", actions: [push("/alert_modal_page")]),
-            nav_button(text: "Drawer Modal", actions: [push("/draw_modal_page")]),
             nav_button(text: "Nav Page", actions: [push("/nav_page_page")]),
             nav_button(text: "Plain Page", actions: [push("/plain_page_page")]),
           ]),
@@ -67,6 +65,6 @@ class HomeController < ApplicationController
   end
 
   def button_pressed_page
-    send_page alert_modal(title: "Button Pressed", modal_buttons: [ok_modal_button])
+    send_page nav_page(title: "Button Pressed") { empty }
   end
 end

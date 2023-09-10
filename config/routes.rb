@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   root "home#index" # Requests for "/" go to HomeController.index.
   get "/button_pressed_page", to: "home#button_pressed_page"
 
-  get "/alert_modal_page", to: "pages#alert_modal_page"
-  get "/draw_modal_page", to: "pages#draw_modal_page"
   get "/nav_page_page", to: "pages#nav_page_page"
   get "/plain_page_page", to: "pages#plain_page_page"
 
@@ -31,6 +29,8 @@ Rails.application.routes.draw do
 
   get "/inert_page", to: "update_modes#inert_page"
   get "/polled_page", to: "update_modes#polled_page"
+
+  # TODO: Demo error handling.
 
   # get "/NNNNN", to: "widgets#NNNNNN"
 end
