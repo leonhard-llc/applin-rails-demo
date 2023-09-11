@@ -24,7 +24,7 @@ class WidgetsController < ApplicationController
   def back_button_rpc_ok_page
     send_page nav_page(title: "RPC", start: back_button(actions: [rpc("/ok"), pop])) {
       column(widgets: [
-        button(text: "Back", actions: [pop]),
+        button(text: "Back without RPC", actions: [pop]),
       ])
     }
   end
@@ -32,7 +32,7 @@ class WidgetsController < ApplicationController
   def back_button_rpc_error_page
     send_page nav_page(title: "RPC Error", start: back_button(actions: [rpc("/error"), pop])) {
       column(widgets: [
-        button(text: "Back", actions: [pop]),
+        button(text: "Back without RPC", actions: [pop]),
       ])
     }
   end

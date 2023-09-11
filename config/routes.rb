@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   # https://guides.rubyonrails.org/routing.html
   get "/healthz", to: proc { [200, {}, ["success"]] }
-  post "/ok", to: proc { [200, {}, ["success"]] }
-  post "/error", to: proc { [400, {}, ["error1"]] }
+  post "/ok", to: proc { [200, {}, []] }
+  post "/error", to: proc { [422, {}, ["example error"]] }
 
   root "home#index" # Requests for "/" go to HomeController.index.
   get "/button_pressed_page", to: "home#button_pressed_page"
