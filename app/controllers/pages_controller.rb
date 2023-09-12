@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   include ::Applin::Rails
+  skip_forgery_protection
 
   def nav_page_page
     send_page nav_page(title: "Nav Page") {

@@ -1,5 +1,6 @@
 class WidgetsController < ApplicationController
   include ::Applin::Rails
+  skip_forgery_protection
 
   def back_button_default_page
     send_page nav_page(title: "Default") { empty }

@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   include ::Applin::Rails
+  skip_forgery_protection
 
   #   def NNNNNNN
   #     send_page nav_page(title: "NNNNN") {

@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get "/back_button_page", to: "widgets#back_button_page"
   get "/button_page", to: "widgets#button_page"
   get "/checkbox_page", to: "widgets#checkbox_page"
+  post "/checkbox_page", to: "widgets#checkbox_page"
   get "/error_text_page", to: "widgets#error_text_page"
   get "/form_button_page", to: "widgets#form_button_page"
   get "/form_section_page", to: "widgets#form_section_page"
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
   get "/image_page", to: "widgets#image_page"
   get "/nav_button_page", to: "widgets#nav_button_page"
   get "/textfield_page", to: "widgets#textfield_page"
+  post "/textfield_page", to: "widgets#textfield_page"
   get "/text_page", to: "widgets#text_page"
 
   get "/inert_page", to: "update_modes#inert_page"

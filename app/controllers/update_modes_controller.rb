@@ -1,5 +1,6 @@
 class UpdateModesController < ApplicationController
   include ::Applin::Rails
+  skip_forgery_protection
 
   #        Ok(NavPage::new(
   #             "Inert",
