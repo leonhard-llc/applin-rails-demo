@@ -46,6 +46,15 @@ class HomeController < ApplicationController
             nav_button(text: "Inert", actions: [push("/inert_page")]),
             nav_button(text: "Polled", actions: [push("/polled_page")]),
           ]),
+          form_section(title: "Error Pages", widgets: [
+            nav_button(text: "App Error", actions: [push("/applin_app_error")]),
+            nav_button(text: "Page Not Loaded", actions: [push("/applin_page_not_loaded")]),
+            nav_button(text: "Network Error", actions: [push("/applin_network_error")]),
+            nav_button(text: "Server Error", actions: [push("/applin_server_error")]),
+            nav_button(text: "State Load Error", actions: [push("/applin_state_load_error")]),
+            nav_button(text: "User Error", actions: [push("/applin_user_error")]),
+            nav_button(text: "Error Details", actions: [push("/error_details")]),
+          ]),
         # form_section(title: "Photos", widgets: [
         #   nav_button(text: "Choose Photo", actions: [push("/upload-photo")]),
         #   nav_button(text: "Take Photo", actions: [push("/take-photo")]),
