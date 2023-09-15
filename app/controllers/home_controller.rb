@@ -45,6 +45,8 @@ class HomeController < ApplicationController
           form_section(title: "Page Update Modes", widgets: [
             nav_button(text: "Inert", actions: [push("/inert_page")]),
             nav_button(text: "Polled", actions: [push("/polled_page")]),
+            # TODO: Implement streaming page updates.
+            # nav_button(text: "stream_page", actions: [push("/stream_page")]),
           ]),
           form_section(title: "Error Pages", widgets: [
             nav_button(text: "App Error", actions: [push("/applin_app_error")]),
@@ -55,16 +57,13 @@ class HomeController < ApplicationController
             nav_button(text: "User Error", actions: [push("/applin_user_error")]),
             nav_button(text: "Error Details", actions: [push("/error_details")]),
           ]),
+          form_section(title: "Example Pages", widgets: [
+            nav_button(text: "New Account", actions: [push("/new_account")]),
+          ]),
         # form_section(title: "Photos", widgets: [
         #   nav_button(text: "Choose Photo", actions: [push("/upload-photo")]),
         #   nav_button(text: "Take Photo", actions: [push("/take-photo")]),
         #   nav_button(text: "View Photo", actions: [push("/view_photo_page")]),
-        # ]),
-        # form_section(title: "Update Modes", widgets: [
-        #   nav_button(text: "Inert", actions: [push("/inert_page")]),
-        #   nav_button(text: "Poll", actions: [push("/poll_page")]),
-        # # TODO: Implement streaming page updates.
-        # # nav_button(text: "stream_page", actions: [push("/stream_page")]),
         # ]),
         # form_section(title: "Vars", widgets: [
         #   nav_button(text: "Check Vars", actions: [push("/check_vars_page")]),
