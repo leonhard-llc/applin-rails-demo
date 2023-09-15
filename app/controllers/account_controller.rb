@@ -14,6 +14,7 @@ class AccountController < ApplicationController
             text: "Create Account",
             actions: [rpc("/create_account"), replace_all("/")],
           ),
+          text("Note: This form is fixed in ApplinIos v0.18.0 and Applin Tester v1.2")
         ])
       }
     }
