@@ -1,13 +1,26 @@
 # applin-rails-demo
-This repo is an example of how to use applin-rails.
-See [app/controllers/home_controller.rb](app/controllers/home_controller.rb).
+This repo is an example of how to use the [applin-rails](https://github.com/leonhard-llc/applin-rails) gem,
+from [Applin™](https://www.applin.dev/).
+
+The interesting parts:
+- [config/routes.rb](config/routes.rb)
+- [app/controllers/](app/controllers/)
+- [app/controllers/home_controller.rb](app/controllers/home_controller.rb)
+- [app/controllers/pages_controller.rb](app/controllers/pages_controller.rb)
+- [app/controllers/update_modes_controller.rb](app/controllers/update_modes_controller.rb)
+- [app/controllers/widgets_controller.rb](app/controllers/widgets_controller.rb)
 
 It runs at https://rails-demo.applin.dev/ .
 
-Run the server locally at `127.0.0.1:3000`:
-* Install Ruby 3.2.2 or newer
-* `bundle install`
-* `bundle exec ./bin/rails server`
+To run the server locally on port 3000:
+1. Install Ruby 3.2.2 or newer
+2. `bundle install`
+3. `bundle exec ./bin/rails server`
 
-Run the tests:
-TODO
+Connect to the server with  [Applin Tester](https://apps.apple.com/us/app/applin-tester/id6464230000)
+or make a new app with [ApplinIos](https://github.com/leonhard-llc/applin-ios) and run it in Simulator.
+
+----
+TODO: Add tests.
+
+TODO: Add instructions for running tests.
