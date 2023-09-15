@@ -14,7 +14,7 @@ class AccountController < ApplicationController
             text: "Create Account",
             actions: [rpc("/create_account"), replace_all("/")],
           ),
-          text("Note: There was a bug where text field values were not sent to the server.  This is fixed in ApplinIos v0.18.0 and Applin Tester v1.2.")
+          text("Note: There was a bug where text field values were not sent to the server.  This is fixed in ApplinIos v0.18.0 and Applin Tester v1.1.")
         ])
       }
     }
