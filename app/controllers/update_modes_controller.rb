@@ -1,17 +1,11 @@
+require "applin"
+require "applin/rails"
+
 class UpdateModesController < ApplicationController
+  include ::Applin
   include ::Applin::Rails
   skip_forgery_protection
 
-  #        Ok(NavPage::new(
-  #             "Inert",
-  #             Column::new((
-  #                 Text::new(format!(
-  #                     "epoch seconds: {}",
-  #                     state_clone.clock_epoch_seconds.read(rebuilder)
-  #                 )),
-  #                 Text::new("The home page has poll=10, so you will see this page update when the app polls."),
-  #             )),
-  #         ))
   def inert_page
     send_page nav_page(title: "Inert") {
       scroll {

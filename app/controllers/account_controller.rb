@@ -1,23 +1,7 @@
-class AccountController < ApplicationController
-  include ::Applin::Rails
-  skip_forgery_protection
+require "applin"
 
-  def new_account_page
-    send_page nav_page(title: "New Account") {
-      scroll {
-        form(widgets: [
-          textfield(label: "Username", var_name: "username"),
-          nav_button(text: "Terms", actions: [push("/terms")]),
-          nav_button(text: "Privacy", actions: [push("/privacy")]),
-          checkbox(text: "I agree", var_name: "agree"),
-          form_button(
-            text: "Create Account",
-            actions: [rpc("/create_account"), replace_all("/")],
-          ),
-        ])
-      }
-    }
-  end
+class AccountController < ApplicationController
+  skip_forgery_protection
 
   def create_account
     if !params[:agree]
@@ -33,4 +17,3 @@ class AccountController < ApplicationController
     head :ok
   end
 end
-

@@ -32,8 +32,8 @@ Rails.application.routes.draw do
   get "/inert_page", to: "update_modes#inert_page"
   get "/polled_page", to: "update_modes#polled_page"
 
-  get "/new_account", to: "account#new_account_page"
-  post "/new_account", to: "account#new_account_page"
+  get "/new_account", to: "account#new_account"
+  post "/new_account", to: "account#new_account"
   post "/create_account", to: "account#create_account"
 
   # TODO: Demo error handling.
