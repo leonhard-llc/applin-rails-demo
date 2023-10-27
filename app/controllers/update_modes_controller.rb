@@ -4,7 +4,7 @@ require "applin/rails"
 class UpdateModesController < ApplicationController
   include ::Applin
   include ::Applin::Rails
-  skip_forgery_protection
+  protect_from_forgery with: :exception, if: -> { !request.format.applin? }
 
   def inert_page
     send_page nav_page(title: "Inert") {

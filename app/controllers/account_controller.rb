@@ -1,7 +1,7 @@
 require "applin"
 
 class AccountController < ApplicationController
-  skip_forgery_protection
+  protect_from_forgery with: :exception, if: -> { !request.format.applin? }
 
   def create_account
     if !params[:agree]

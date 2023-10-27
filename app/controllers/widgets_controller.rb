@@ -1,5 +1,5 @@
 require "applin"
 
 class WidgetsController < ApplicationController
-  skip_forgery_protection
+  protect_from_forgery with: :exception, if: -> { !request.format.applin? }
 end
