@@ -5,10 +5,7 @@ from [Applin™](https://www.applin.dev/).
 The interesting parts:
 - [config/routes.rb](config/routes.rb)
 - [app/controllers/](app/controllers/)
-- [app/controllers/home_controller.rb](app/controllers/home_controller.rb)
-- [app/controllers/pages_controller.rb](app/controllers/pages_controller.rb)
-- [app/controllers/update_modes_controller.rb](app/controllers/update_modes_controller.rb)
-- [app/controllers/widgets_controller.rb](app/controllers/widgets_controller.rb)
+- [app/views/](app/views/)
 
 It runs at https://rails-demo.applin.dev/ .
 

@@ -37,6 +37,4 @@ Rails.application.routes.draw do
   post "/create_account", to: "account#create_account"
 
   # TODO: Demo error handling.
-
-  # get "/NNNNN", to: "widgets#NNNNNN"
 end
