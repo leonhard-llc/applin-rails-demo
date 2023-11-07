@@ -15,8 +15,9 @@ json.page Applin::nav_page(title: "Text Field") {
       Applin::textfield(var_name: "field7", label: "Enter email", allow: Applin::ALLOW_EMAIL),
       Applin::textfield(var_name: "field8", label: "Enter name", auto_capitalize: Applin::AUTO_CAPITALIZE_NAMES),
       Applin::textfield(var_name: "field8", label: "Enter sentences", auto_capitalize: Applin::AUTO_CAPITALIZE_SENTENCES),
-      Applin::textfield(var_name: "field9", label: "Enter one line", max_lines: 1),
-      Applin::textfield(var_name: "field10", label: "Enter up to three lines", max_lines: 3),
+      # TODO: Implement textfield.max_lines and uncomment.
+      # Applin::textfield(var_name: "field9", label: "Enter one line", max_lines: 1),
+      # Applin::textfield(var_name: "field10", label: "Enter up to three lines", max_lines: 3),
     ])
   }
 }
