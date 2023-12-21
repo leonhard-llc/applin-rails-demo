@@ -6,7 +6,6 @@ json.page Applin::nav_page(title: "Button") {
       Applin::button(text: "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM", actions: [Applin::push("/button_pressed_page")]),
       Applin::button(text: "", actions: [Applin::push("/button_pressed_page")]),
       Applin::button(text: "Disabled Button", actions: []),
-      Applin::button(text: "Does Nothing", actions: [Applin::nothing]),
     ])
   }
 }
