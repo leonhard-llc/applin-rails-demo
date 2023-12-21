@@ -19,6 +19,7 @@ json.page Applin::nav_page(title: "Text Field") {
       # Applin::textfield(var_name: "one-line", label: "Enter one line", max_lines: 1),
       # Applin::textfield(var_name: "three-lines-max", label: "Enter up to three lines", max_lines: 3),
       Applin::text("Time of page poll: " + Time.new.strftime("%Y-%m-%d %H:%M:%S")),
+      Applin::textfield(var_name: "polls", label: "Polls page", poll_delay_ms: 0),
       Applin::textfield(var_name: "with-poll-delay", label: "Polls page after 1 second delay", poll_delay_ms: 1000),
     ])
   }
