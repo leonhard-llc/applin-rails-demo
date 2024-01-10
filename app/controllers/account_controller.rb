@@ -3,8 +3,10 @@ require "applin"
 class AccountController < ApplicationController
   protect_from_forgery with: :exception, if: -> { !request.format.applin? }
 
-  def agree_param
-    params[:agree] == true
+  def agree_error
+    if params[:agree] != true
+      "You must agree to the terms"
+    end
   end
 
   def username_param
@@ -14,21 +16,29 @@ class AccountController < ApplicationController
     end
   end
 
+  def username_error
+    if self.username_param.nil?
+      "Please enter letters and numbers"
+    end
+  end
+
   def new_account
-    # These values are available to templates.
-    @agree = self.agree_param
-    @username_bad = self.params[:username] && self.username_param.nil?
+    # Set values to be available in templates.
+    if request.request_method == "GET"
+      @agree_error = nil
+      @username_error = nil
+    else
+      @agree_error = self.agree_error
+      @username_error = self.username_error
+    end
   end
 
   def create_account
-    if !self.agree_param
-      return render plain: "You must agree to the terms",
-                    status: :unprocessable_entity
+    if !self.agree_error.nil?
+      return render plain: self.agree_error, status: :unprocessable_entity
     end
-    username = self.username_param
-    if username.nil?
-      return render plain: "Please enter letters and numbers",
-                    status: :unprocessable_entity
+    if !self.username_error.nil?
+      return render plain: self.username_error, status: :unprocessable_entity
     end
     # ...
     head :ok

@@ -36,9 +36,9 @@ json.page Applin::nav_page(title: "Applin Rails Demo", poll_seconds: 30) {
         Applin::nav_button(text: "App Error", actions: [Applin::push("/applin_app_error")]),
         Applin::nav_button(text: "Page Not Loaded", actions: [Applin::push("/applin_page_not_loaded")]),
         Applin::nav_button(text: "Network Error", actions: [Applin::push("/applin_network_error")]),
-        Applin::nav_button(text: "Server Error", actions: [Applin::push("/applin_server_error")]),
+        Applin::nav_button(text: "Server Error", actions: [Applin::push("/server_error")]),
         Applin::nav_button(text: "State Load Error", actions: [Applin::push("/applin_state_load_error")]),
-        Applin::nav_button(text: "User Error", actions: [Applin::push("/applin_user_error")]),
+        Applin::nav_button(text: "User Error", actions: [Applin::push("/user_error")]),
         Applin::nav_button(text: "Error Details", actions: [Applin::push("/error_details")]),
       ]),
       Applin::form_section(title: "Example Pages", widgets: [
