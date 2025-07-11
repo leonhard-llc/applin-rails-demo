@@ -1,7 +1,7 @@
 services:
   - type: web
     name: rails-demo.applin.dev
-    plan: starter
+    plan: free
     numInstances: 1
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
